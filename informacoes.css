@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #18181b;
+  color: #f4f4f5;
+  overflow-x: hidden;
+}
+
+/* BARRA SUPERIOR COM LEVE TRANSPARÊNCIA */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 76px;
+  padding: 0 3.5rem;
+  background-color: rgba(24, 24, 27, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(200, 16, 16, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-star {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.brand-star:hover {
+  transform: scale(1.08);
+}
+
+.star-svg {
+  width: 32px;
+  height: 42px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.nav-links a {
+  font-family: 'Space Mono', monospace;
+  text-decoration: none;
+  color: #c81010;
+  font-size: 0.94rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding-bottom: 3px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ef1c1c;
+  border-bottom: 1.5px solid #ef1c1c;
+}
+
+/* TOPO ESCURO ANTES DA CURVA */
+.page-hero {
+  background-color: #242426;
+  min-height: 150px;
+  padding: 2.5rem 2rem 6.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BLOCO PRINCIPAL CLARO COM CURVA SUPERIOR */
+/* Fundo principal em preto e borda curva em vermelho (ou branco) */
+.light-section {
+  position: relative;
+  background-color: #161619; /* fundo preto */
+  color: #f4f4f5;
+  border-top: 3px solid #c81010; /* curva em vermelho — se quiser branco, mude para #ffffff */
+  border-top-left-radius: 50% 95px;
+  border-top-right-radius: 50% 95px;
+  margin-top: -75px;
+  padding-top: 5.5rem;
+}
+
+.info-block {
+  padding: 3.5rem 6%;
+}
+
+.last-block {
+  padding-bottom: 5.5rem;
+}
+
+.info-container {
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TÍTULOS COM ESTRELA */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.8rem;
+}
+
+.section-heading.center {
+  justify-content: center;
+}
+
+.star-svg-title {
+  width: 26px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.section-heading h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.05rem);
+  font-weight: 800;
+  color: #dadada;
+  letter-spacing: 0.01em;
+}
+
+/* QUADRO PRETO COM PARTE CURVADA VERMELHA (OU BRANCA) */
+.doc-frame {
+  width: 100%;
+  max-width: 780px;
+  background-color: #161619;
+  color: #f4f4f5;
+  border: 2px solid #c81010; /* Troque #c81010 por #ffffff se preferir a curvada branca */
+  border-radius: 28px 6px 28px 6px;
+  padding: 1.15rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+
+.doc-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px 4px 18px 4px;
+}
+
+/* DIVISOR COM X */
+.topic-divider {
+  max-width: 900px;
+  margin: 0.5rem auto;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1.5px;
+  background-color: rgba(17, 17, 20, 0.35);
+}
+
+.divider-x-svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+/* RODAPÉ */
+.footer {
+  background-color: #161619;
+  border-top: 2px solid rgba(200, 16, 16, 0.45);
+  color: #f4f4f5;
+  padding: 2.8rem 3.5rem;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-credits-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.footer-diag-star {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.footer-credits p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #e4e4e7;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #1e1e23;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #e1121c;
+  border-color: rgba(200, 16, 16, 0.65);
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 820px) {
+  .navbar {
+    padding: 0 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.84rem;
+  }
+
+  .info-block {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .doc-frame {
+    padding: 0.75rem;
+    border-radius: 22px 6px 22px 6px;
+  }
+
+  .footer {
+    padding: 2.2rem 1.5rem;
+  }
+}

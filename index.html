@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Portfólio - Karen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="split-container">
+    <!-- LADO ESQUERDO: Fundo editorial escuro com carmesim suave -->
+    <section class="visual-panel" aria-hidden="true"></section>
+
+    <!-- LADO DIREITO: Login -->
+    <section class="form-panel">
+      <div class="login-card">
+        <h1 class="firestarter-title">LOGIN</h1>
+        <hr class="divider" />
+
+        <form id="loginForm" autocomplete="off" novalidate>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="portfolio_user_email"
+              placeholder="seuemail@gmail.com"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Senha</label>
+            <div class="password-field">
+              <input
+                type="password"
+                id="password"
+                name="portfolio_user_pass"
+                placeholder="Senha"
+                autocomplete="new-password"
+                required
+              />
+              <button type="button" id="togglePassword" class="toggle-pass">VER</button>
+            </div>
+          </div>
+
+          <p id="feedbackMessage" class="feedback-msg" role="alert"></p>
+
+          <button type="submit" id="submitBtn" class="btn-entrar">Entrar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

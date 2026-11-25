@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anexos | ATO III — Chuva Efêmera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="anexos.css" />
+  <script src="anexos.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="home.html" class="brand-star" aria-label="Home">
+      <svg viewBox="0 0 100 130" class="star-svg">
+        <path d="M50 4 C54 38 64 50 92 54 C64 58 54 70 50 126 C46 70 36 58 8 54 C36 50 46 38 50 4 Z" fill="#c81010"/>
+      </svg>
+    </a>
+
+    <nav class="nav-links">
+      <a href="home.html">Sobre mim</a>
+      <a href="informacoes.html">Informações</a>
+      <a href="eixos.html">Eixos</a>
+      <a href="curriculo.html">Curriculo</a>
+      <a href="anexos.html" class="active">Anexos</a>
+    </nav>
+  </header>
+
+  <section class="ato-topo">
+    <div class="ato-topo-inner">
+      <div class="ato-titulo-linha">
+        <svg viewBox="0 0 100 130" class="ato-star" aria-hidden="true">
+          <path d="M50 4 C54 38 64 50 92 54 C64 58 54 70 50 126 C46 70 36 58 8 54 C36 50 46 38 50 4 Z" fill="#c81010"/>
+        </svg>
+        <h1 class="ato-titulo">ATO III</h1>
+        <svg viewBox="0 0 100 130" class="ato-star" aria-hidden="true">
+          <path d="M50 4 C54 38 64 50 92 54 C64 58 54 70 50 126 C46 70 36 58 8 54 C36 50 46 38 50 4 Z" fill="#c81010"/>
+        </svg>
+      </div>
+      <div class="ato-rule" aria-hidden="true">
+        <span class="rule-diamond"></span>
+        <span class="rule-line"></span>
+        <span class="rule-diamond"></span>
+      </div>
+      <span class="ato-kicker">CHUVA EFÊMERA.</span>
+    </div>
+  </section>
+
+  <main class="anexos-page">
+
+    <!-- ANEXOS / MEMÓRIAS -->
+    <section class="memorias-secao">
+      <header class="memorias-header">
+        <h2 class="memorias-titulo">ANEXOS</h2>
+        <span class="memorias-sub">MEMÓRIAS</span>
+      </header>
+
+      <div class="memorias-grid">
+        <!-- Duplique ou edite os itens abaixo conforme suas imagens -->
+        <figure class="memoria-item">
+          <button type="button" class="memoria-box" aria-label="Ampliar Memória 01">
+            <img src="img/GP.png" alt="Memória 01" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          </button>
+        </figure>
+
+        <figure class="memoria-item">
+          <button type="button" class="memoria-box" aria-label="Ampliar Memória 01">
+            <img src="img/1000321236.jpg" alt="Memória 01" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          </button>
+        </figure>
+
+        <figure class="memoria-item">
+          <button type="button" class="memoria-box" aria-label="Ampliar Memória 01">
+            <img src="img/1000321243.jpg" alt="Memória 01" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          </button>
+        </figure>
+
+        <figure class="memoria-item">
+          <button type="button" class="memoria-box" aria-label="Ampliar Memória 01">
+            <img src="img/1000321221.jpg" alt="Memória 01" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          </button>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONSIDERAÇÕES FINAIS -->
+    <section class="consideracoes-secao">
+      <h2 class="consideracoes-titulo">CONSIDERAÇÕES FINAIS</h2>
+      <div class="consideracoes-card">
+        <p class="consideracoes-texto">
+          Para finalizar, quero falar um pouco da minha experiência com o portfólio. Eu tive que disponibilizar mais do meu tempo para organizá-lo, tanto fisicamente como virtualmente, e tive que ter mais compromisso com as atividades escolares. Criando assim um senso de responsabilidade em mim, me fazendo constantemente prestar atenção nas atividades que iriam ou não para ele.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL DE FOTO EM CARROSSEL (SÓ IMAGEM) -->
+  <div class="modal-anexo" id="modalAnexo" aria-hidden="true">
+    <button type="button" class="modal-fechar" id="modalFechar" aria-label="Fechar imagem">✕</button>
+    <button type="button" class="modal-seta modal-prev" id="modalPrev" aria-label="Foto anterior">‹</button>
+
+    <div class="modal-foto-frame" id="modalFotoFrame">
+      <img src="" alt="" id="modalImg" />
+    </div>
+
+    <button type="button" class="modal-seta modal-next" id="modalNext" aria-label="Próxima foto">›</button>
+  </div>
+
+</body>
+</html>
