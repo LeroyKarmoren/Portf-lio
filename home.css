@@ -498,3 +498,230 @@ body {
     padding: 2.2rem 1.5rem;
   }
 }
+
+/* === RESPONSIVIDADE — HOME.CSS === */
+
+/* Tablet (até 960px) */
+@media (max-width: 960px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+
+  .hero {
+    padding: 4.5rem 2rem;
+  }
+
+  .sobre-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+    padding: 2.5rem 2rem;
+  }
+
+  .sobre-texto {
+    max-width: 600px;
+  }
+
+  .section-heading {
+    justify-content: center;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin: 0 auto;
+    gap: 1.4rem;
+  }
+}
+
+/* Celular (até 640px) */
+@media (max-width: 640px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Navbar */
+  .navbar {
+    height: auto;
+    padding: 0.85rem 1rem;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .star-svg {
+    width: 28px;
+    height: 36px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  /* Hero ("KAREN • 2026 / PORTFOLIO") */
+  .hero {
+    min-height: auto;
+    padding: 3.2rem 1.2rem 3.5rem;
+  }
+
+  .hero-accent-diag {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero-kicker {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+    letter-spacing: 0.14em;
+  }
+
+  .slash-line {
+    width: 55px;
+  }
+
+  .slash-star {
+    width: 18px;
+    height: 24px;
+  }
+
+  /* Banner ATO I - O Valete. */
+  .act-banner {
+    padding: 1.8rem 1rem 1.4rem;
+  }
+
+  .act-banner-label {
+    font-size: 1.45rem;
+    letter-spacing: 0.14em;
+  }
+
+  .banner-spark {
+    width: 18px;
+    height: 22px;
+  }
+
+  .act-subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Bloco Sobre Mim */
+  .screen-block {
+    padding: 2rem 1.15rem;
+  }
+
+  .sobre-container {
+    padding: 0;
+    gap: 2rem;
+  }
+
+  /* Moldura da foto sem estourar a largura no celular */
+  .photo-rig {
+    width: min(250px, 72vw);
+    margin: 0 auto;
+  }
+
+  .foto-moldura img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .photo-shadow-frame {
+    top: 10px;
+    left: 10px;
+  }
+
+  .photo-star-badge {
+    width: 34px;
+    height: 34px;
+    right: -10px;
+    bottom: -10px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+  }
+
+  .star-svg-title {
+    width: 18px;
+    height: 24px;
+  }
+
+  .bio,
+  .filiacao {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .contato-info {
+    font-size: 0.82rem;
+    word-break: break-word;
+  }
+
+  /* Divisor X */
+  .topic-divider {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .divider-line {
+    max-width: 90px;
+  }
+
+  /* Objetivos */
+  .objetivos-container {
+    padding: 0;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .objetivo-card {
+    padding: 1.4rem 1.2rem;
+  }
+
+  .objetivo-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  /* Rodapé */
+  .footer {
+    padding: 1.8rem 1.1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  .footer-credits-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-credits p {
+    font-size: 0.78rem;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 1.2rem;
+  }
+}
