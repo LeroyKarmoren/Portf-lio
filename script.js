@@ -1,21 +1,31 @@
+
 async function autenticarUsuario(email, senha) {
     try {
-        const resposta = await fetch('/api/login', {
-    credentials: 'include',
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email, senha })
+        const { data, error } = await supabaseClient.auth.signInWithPassword({
+            email: email,
+            password: senha
         });
 
-        const resultado = await resposta.json();
-        return resultado;
+        if (error) {
+            console.error('Erro de autenticação:', error);
+
+            return {
+                sucesso: false,
+                mensagem: 'E-mail ou senha incorretos.'
+            };
+        }
+
+        return {
+            sucesso: true,
+            mensagem: 'Login realizado com sucesso!'
+        };
+
     } catch (erro) {
         console.error('Erro:', erro);
+
         return {
             sucesso: false,
-            mensagem: 'Não foi possível conectar ao servidor.'
+            mensagem: 'Não foi possível conectar ao Supabase.'
         };
     }
 }
@@ -30,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     togglePasswordBtn.addEventListener('click', () => {
         const isPassword = passwordInput.type === 'password';
+
         passwordInput.type = isPassword ? 'text' : 'password';
         togglePasswordBtn.textContent = isPassword ? 'OCULTAR' : 'VER';
     });
@@ -61,9 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 window.location.href = 'home.html';
             }, 800);
+
         } else {
             feedbackMessage.textContent = resultado.mensagem;
             feedbackMessage.classList.add('error');
+
             submitBtn.disabled = false;
             submitBtn.textContent = 'Entrar';
         }
