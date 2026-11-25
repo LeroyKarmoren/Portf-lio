@@ -10,7 +10,7 @@ CREATE TABLE usuarios (
 
 INSERT INTO usuarios (email, senha)
 VALUES
-('aluno@gmail.com', '123'),
-('prof@gmail.com', '123');
+('aluno@gmail.com', '123456'),
+('prof@gmail.com', '123456');
 
 SELECT * FROM usuarios;
