@@ -1,6 +1,7 @@
 async function autenticarUsuario(email, senha) {
     try {
-        const resposta = await fetch('http://localhost:3000/api/login', {
+        const resposta = await fetch('/api/login', {
+    credentials: 'include',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const resultado = await autenticarUsuario(email, senha);
 
         if (resultado.sucesso) {
-            localStorage.setItem('usuarioLogado', email);
             feedbackMessage.textContent = resultado.mensagem;
             feedbackMessage.classList.add('success');
 
