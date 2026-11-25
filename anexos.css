@@ -400,3 +400,137 @@ body {
     padding: 1.6rem 1.3rem;
   }
 }
+
+/* === RESPONSIVIDADE MOBILE REFINADA === */
+
+/* Tablet (até 960px) */
+@media (max-width: 960px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+
+  .memorias-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+/* Celular (até 640px) */
+@media (max-width: 640px) {
+  /* Navbar compacta e centralizada */
+  .navbar {
+    height: auto;
+    padding: 0.85rem 1rem;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .star-svg {
+    width: 28px;
+    height: 36px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  /* Topo ATO III proporcional */
+  .ato-topo {
+    padding: 1.6rem 1rem 1.8rem;
+  }
+
+  .ato-titulo-linha {
+    gap: 0.65rem;
+  }
+
+  .ato-star {
+    width: 18px;
+    height: 24px;
+  }
+
+  .ato-titulo {
+    font-size: 1.55rem;
+    letter-spacing: 0.12em;
+  }
+
+  .ato-rule {
+    width: 135px;
+  }
+
+  /* Espaçamento geral da página */
+  .anexos-page {
+    padding: 2rem 1rem 4rem;
+    gap: 4.5rem;
+  }
+
+  /* Grade de Memórias em 2 colunas no celular (fica estilo feed/galeria) */
+  .memorias-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  .memoria-box {
+    border-radius: 10px;
+  }
+
+  /* Considerações Finais legível sem encostar nas bordas */
+  .consideracoes-card {
+    padding: 1.5rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  .consideracoes-texto {
+    font-size: 0.88rem;
+    line-height: 1.68;
+  }
+
+  /* Modal de foto confortável no toque */
+  .modal-anexo {
+    padding: 1rem;
+  }
+
+  .modal-foto-frame {
+    max-width: 92vw;
+    max-height: 75vh;
+  }
+
+  .modal-foto-frame img {
+    max-height: 75vh;
+  }
+
+  .modal-seta {
+    top: auto;
+    bottom: 1.5rem;
+    transform: none;
+    width: 46px;
+    height: 46px;
+    font-size: 1.6rem;
+    background-color: rgba(20, 20, 24, 0.94);
+  }
+
+  .modal-seta:hover {
+    transform: scale(1.06);
+  }
+
+  .modal-prev {
+    left: calc(50% - 56px);
+  }
+
+  .modal-next {
+    right: calc(50% - 56px);
+  }
+
+  .modal-fechar {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+}
